@@ -2,20 +2,20 @@
 
 int main(void)
 {
-	int n, triangularNumber;
+	int n = 1, triangularNumber = 0;
 
 	printf("TABLE OF TRIANGULAR NUMBERS\n\n");
-	printf("n 	Sum from 1 to n\n");
+	printf(" n 		Sum from 1 to n\n");
 	printf("--- -----------------------\n");
 
-	triangularNumber = 0;
-
-	for (n = 1; n <=10; ++n)
+	while (n <= 10)
 	{
 		triangularNumber += n;
-		printf("%-2i		%i\n", n, triangularNumber);
 
+		printf("%2i 		%i\n", n, triangularNumber);
+
+		n += 1;
 	}
-	
+
 	return 0;
 }
