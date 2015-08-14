@@ -1,5 +1,5 @@
 /*  Program to evaluate simple expressions of the form
-	number  operator  number
+		value  operator  value
 */
 
 #include <stdio.h>
@@ -15,11 +15,16 @@ int main(void)
 	if 		(operator1 == '+')
 		printf("%.2f\n", value1 + value2);
 	else if (operator1 == '-')
-		printf("%2.f\n", value1 - value2);
+		printf("%.2f\n", value1 - value2);
 	else if (operator1 == '*')
 		printf("%.2f\n", value1 * value2);
 	else if (operator1 == '/')
-		printf("%.2f\n", value1 / value2);
+		if 		(value2 == 0)
+			printf("Division by zero.\n");
+		else
+			printf("%.2f\n", value1 / value2);
+	else
+		printf("Unknown operator.\n");
 
 	return 0;
 }
