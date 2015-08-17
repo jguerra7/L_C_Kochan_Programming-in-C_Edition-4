@@ -17,6 +17,7 @@ int main(void)
 			if (p % d == 0)
 				isPrime = false;
 		}
+		
 		if (isPrime != false)
 		{
 			printf("%i  ", p);
