@@ -9,8 +9,11 @@ int main(void)
 
 	printf("Enter your responses: \n");
 
-	for (i = 1; response = 999; ++i) {
+	for (i = 1;; ++i) {
 		scanf("%i", &response);
+		
+		if (response == 999)
+			break;
 
 		if (response < 1  ||  response > 10)
 			printf("Bad response: %i\n", response);
