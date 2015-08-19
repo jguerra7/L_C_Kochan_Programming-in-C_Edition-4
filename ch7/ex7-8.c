@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Function to calcualte the absolute value of a number
+// Function to calculate the absolute value of a number
 
 float absolute_value(float x)
 {
