@@ -1,4 +1,4 @@
-// Program to sot an array of integers into ascending order
+// Program to sort an array of integers into ascending order
 
 #include <stdio.h>
 
@@ -32,7 +32,7 @@ int main(void)
 
 	sort(array, 16);
 
-	printf("\n\n The array after the sort\n");
+	printf("\n\nThe array after the sort\n");
 
 	for (i = 0; i < 16; ++i) {
 		printf("%i ", array[i]);

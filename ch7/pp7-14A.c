@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int main(void)
-{
-	int n = 150;
-	int primes[n];
-	int i, j;
+int i, j, n = 47;
+int primes[47];
 
+int prime(void)
+{
 	for (i = 0; i <= n; ++i) {
 		primes[i] = 1;
 	}
@@ -21,12 +20,15 @@ int main(void)
 		}
 	}
 
-	for (i = 0; i <= n; ++i) {
-		if (primes[i] == 1) {
-			printf("%i ", i);
-		}
+	if (primes[n] != 0) {
+		return 1;
 	}
+	return 0;
+}
 
-	printf("\n");
+int main(void)
+{
+	printf("%i\n", prime());
+
 	return 0;
 }
