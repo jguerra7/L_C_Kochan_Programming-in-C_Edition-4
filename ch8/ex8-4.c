@@ -35,7 +35,7 @@ struct date dateUpdate(struct date today)
 	return tomorrow;
 }
 
-// Function to find the number od days in a month
+// Function to find the number of days in a month
 
 int numberOfDays(struct date d)
 {
