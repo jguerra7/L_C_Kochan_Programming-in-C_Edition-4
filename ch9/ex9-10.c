@@ -17,6 +17,7 @@ int compareStrings(const char s1[], const char s2[])
 	while (s1[i] == s2[i] &&
 			s1[i] != '\0' && s2[i] != '\0')
 		++i;
+	
 	if 		(s1[i] < s2[i])
 		answer = -1;
 	else if (s1[i] == s2[i])
@@ -52,6 +53,7 @@ int lookup(const struct entry dictionary[], const char search[],
 
 	return -1;
 }
+
 
 int main(void)
 {
