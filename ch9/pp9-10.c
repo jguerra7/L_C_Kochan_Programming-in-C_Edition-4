@@ -1,10 +1,9 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 struct entry
 {
 	char word[15];
-	char def[50];
+	char definition[50];
 };
 
 
@@ -27,17 +26,20 @@ int compareStrings(const char s1[], const char s2[])
 }
 
 
-void dictionarySort(struct entry dict[100], int n)
+void dictionarySort(struct entry dict[], int n)
 {
 	int i, j;
-	struct entry temp[100];
+	struct entry temp[1];
 
-	for (i = 0; i < n - 1; ++i) {
-		for (j = i + 1; j < n; ++j) {
-			if (compareStrings(dict[i].word, dict[j].word) == -1)  {
-				temp = dict[i];
+	for (i = 0; i < n - 1; ++i) 
+	{
+		for (j = i + 1; j < n; ++j) 
+		{
+			if (compareStrings(dict[i].word, dict[j].word) == 1)  
+			{
+				temp[0] = dict[i];
 				dict[i] = dict[j];
-				dict[j] = temp;
+				dict[j] = temp[0];
 			}
 		}
 	}
@@ -46,6 +48,7 @@ void dictionarySort(struct entry dict[100], int n)
 
 int main(void)
 {
+	int i;
 	struct entry dictionary[100] = 
 		{{"abyss", 		"a bottomless pit"},
 		 {"aerie", 		"a high nest"},
@@ -61,5 +64,9 @@ int main(void)
 
 	dictionarySort(dictionary, entries);
 
+	for (i = 0; i < 10; ++i)
+	{
+		printf("%s, %s\n", dictionary[i].word, dictionary[i].definition);
+	}
 	return 0;
 }
