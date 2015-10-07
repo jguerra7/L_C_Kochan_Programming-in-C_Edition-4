@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+
 float strToInt(const char string[])
 {
 	int i, intValue;
