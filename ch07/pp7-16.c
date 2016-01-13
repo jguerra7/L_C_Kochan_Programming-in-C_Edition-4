@@ -7,6 +7,24 @@ long int	numberToConvert;
 int			base = 0;
 int			digit = 0;
 
+
+int main(void)
+{
+	void getNumberAndBase(void);
+	void convertNumber(void);
+	void displayConvertedNumber(void);
+
+	while (1) {
+		getNumberAndBase();
+		if (numberToConvert == 0)
+			return 0;
+		convertNumber();
+		displayConvertedNumber();
+	}
+	return 0;
+}
+
+
 void getNumberAndBase(void)
 {
 	printf("Number to be converted: ");
@@ -24,6 +42,7 @@ void getNumberAndBase(void)
 	}
 }
 
+
 void convertNumber(void)
 {
 	do {
@@ -33,6 +52,7 @@ void convertNumber(void)
 	}
 	while (numberToConvert != 0);
 }
+
 
 void displayConvertedNumber(void)
 {
@@ -49,20 +69,4 @@ void displayConvertedNumber(void)
 	}
 
 	printf("\n");
-}
-
-int main(void)
-{
-	void getNumberAndBase(void);
-	void convertNumber(void);
-	void displayConvertedNumber(void);
-
-	while (1) {
-		getNumberAndBase();
-		if (numberToConvert == 0)
-			return 0;
-		convertNumber();
-		displayConvertedNumber();
-	}
-	return 0;
 }
