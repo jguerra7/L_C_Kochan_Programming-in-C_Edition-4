@@ -1,4 +1,4 @@
-// Program to update time by one second
+// Program to undate time by one second
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -13,7 +13,6 @@ struct time
 int main(void)
 {
 	struct time timeUpdate(struct time now);
-	
 	struct time currentTime, nextTime;
 
 	printf("Enter the time (hh:mm:ss): ");
@@ -34,22 +33,17 @@ struct time timeUpdate(struct time now)
 {
 	++now.seconds;
 
-	if (now.seconds == 60) 
-	{
+	if (now.seconds == 60) {
 		now.seconds = 0;
 		++now.minutes;
 
-		if (now.minutes == 60) 
-		{
+		if (now.minutes == 60) {
 			now.minutes = 0;
 			++now.hour;
 
 			if (now.hour == 24)
-			{
 				now.hour = 0;
-			}
 		}
 	}
-	
 	return now;
 }
