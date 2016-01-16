@@ -57,7 +57,8 @@ void displayConvertedNumber(void)
 
 	printf("Converted number = ");
 
-	for (--digit; digit >= 0; --digit) {
+	for (--digit; digit >= 0; --digit) 
+	{
 		nextDigit = convertedNumber[digit];
 		printf("%c", baseDigits[nextDigit]);
 	}

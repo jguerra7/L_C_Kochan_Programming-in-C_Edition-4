@@ -42,7 +42,7 @@ int get_date(void)
 	return result;
 }
 
-// Year modifier for fomula
+// Year modifier for formula
 
 int year_mod(int year, int month)
 {

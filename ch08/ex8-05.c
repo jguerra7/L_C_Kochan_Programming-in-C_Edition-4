@@ -1,4 +1,4 @@
-// Program to undate time by one second
+// Program to update time by one second
 
 #include <stdio.h>
 #include <stdbool.h>

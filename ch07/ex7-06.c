@@ -1,5 +1,5 @@
 /*  Function to find the greatest common divisor of two
-	nonnegative integer values to return the result
+	non-negative integer values to return the result
 */
 
 #include <stdio.h>

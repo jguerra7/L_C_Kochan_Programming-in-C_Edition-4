@@ -14,14 +14,14 @@ int main(void)
 	void convertNumber(void);
 	void displayConvertedNumber(void);
 
-	while (1) {
+	while (1) 
+	{
 		getNumberAndBase();
 		if (numberToConvert == 0)
 			return 0;
 		convertNumber();
 		displayConvertedNumber();
 	}
-	return 0;
 }
 
 

@@ -6,7 +6,7 @@ int main(void)
 
 	for (counter = 1; counter <= 5; ++counter)
 	{
-		printf("What traingular number do you want?: ");
+		printf("What triangular number do you want?: ");
 		scanf("%i", &number);
 
 		triangularNumber = 0;
