@@ -23,7 +23,7 @@ int main(void)
 			totalWords += countWords(text);
 	}
 
-	printf("\nThere are %i words in the above text.\n", totalWords);
+	printf("\n There are %i words in the above text.\n", totalWords);
 
 	return 0;
 }
@@ -31,7 +31,7 @@ int main(void)
 
 bool alphabetic(const char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '\'')
 		return true;
 	else
 		return false;
@@ -57,11 +57,12 @@ void readLine(char buffer[])
 
 int countWords(const char string[])
 {	
-	bool lookingForWord = true, alphabetic(const char c);
+	bool alphabetic(const char c);
 
 	int i, wordCount = 0;
+	bool lookingForWord = true;
 
-	for (i = 0; string[i] != '\0'; ++i) {
+	for (i = 0; string[i] != '\0'; ++i)
 		if (alphabetic(string[i]))
 		{
 			if (lookingForWord)
@@ -72,6 +73,6 @@ int countWords(const char string[])
 		}
 		else
 			lookingForWord = true;
-	}
+
 	return wordCount;
 }
