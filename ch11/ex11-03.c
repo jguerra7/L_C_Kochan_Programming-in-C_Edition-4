@@ -1,13 +1,13 @@
-// Function to shift an insigned int left if
-// the count is positive, and right if negative
+// Function to shift an unsigned int left if
+// the count is positive, and right of negative
 
 #include <stdio.h>
 
 unsigned int shift(unsigned int value, int n)
 {
-	if (n > 0) 		// left shift
+	if (n > 0)      // left shift
 		value <<= n;
-	else			// right shift
+	else
 		value >>= -n;
 
 	return value;
@@ -16,7 +16,6 @@ unsigned int shift(unsigned int value, int n)
 int main(void)
 {
 	unsigned int w1 = 0177777u, w2 = 0444u;
-	unsigned int shift(unsigned int value, int n);
 
 	printf("%o\t%o\n", shift(w1, 5), w1 << 5);
 	printf("%o\t%o\n", shift(w1, -6), w1 >> 6);
