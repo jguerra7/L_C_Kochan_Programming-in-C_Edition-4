@@ -1,4 +1,4 @@
-# Programming-in-C-4th---Kochan
+# Kochan, Stephen - Programming in C - Edition 4
 
 # Source Code for examples and solutions to practice problems
 
